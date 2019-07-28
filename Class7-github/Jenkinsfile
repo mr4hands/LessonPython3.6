@@ -1,0 +1,23 @@
+pipeline {
+ agent any
+ stages {
+  stage("test") {
+   steps {
+    script {
+     try {
+      echo 'do your stuff'
+     } catch (Exception e) {
+      echo 'Handle the exception!'
+     }
+    git 'https://github.com/mr4hands/LessonPython3.6'
+    }
+   }
+  }
+  stage("Builsd"){
+   steps{
+    bat 'python 1.py'
+   }
+  }
+ }
+}
+
