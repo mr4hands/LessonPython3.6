@@ -1,1 +1,1 @@
-echo 'running from python file'
+print( 'running from python file')
